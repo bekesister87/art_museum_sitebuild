@@ -1,0 +1,268 @@
+                            @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+                            //variables
+                            $red:#FF473A;
+                            $white:#fff;
+                            $black: #000;
+                            $dark:#050505;
+                            $grey: #D4D4D4;
+                            //mixin
+                            @mixin icon-bg {
+                                width: 1em;
+                                height: 1em;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                display: inline-block;
+                                content: "";
+                                position: relative;
+                                right: 9px;
+                            }
+                            
+                            @mixin center-container {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                            }
+                            
+                            body {
+                                font-family: 'Montserrat', sans-serif;
+                            }
+                            
+                            .toggler {
+                                color: gray;
+                            }
+                            
+                            .search-box {
+                                margin-left: 20px;
+                            }
+                            
+                            .icon-color {
+                                filter: brightness(0) saturate(100%)
+                            }
+                            
+                            .navbar-light .navbar-toggler {
+                                color: #000;
+                            }
+                            
+                            .navbar {
+                                background-color: #fff;
+                                box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+                            }
+                            
+                            .icon-art-museum {
+                                font-size: 1.5em;
+                            }
+                            
+                            .navbar-light .navbar-nav .nav-link a {
+                                color: $black;
+                                font-size: 13px;
+                                line-height: 22px;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                            }
+                            
+                            .icon-search {
+                                background: url("../img/search.svg");
+                                @include icon-bg();
+                            }
+                            
+                            .navbar-toggler {
+                                border-color: rgb(255, 255, 255) !important;
+                            }
+                            
+                            .icon-events {
+                                background: url("../img/events.svg");
+                                @include icon-bg();
+                            }
+                            
+                            .icon-art {
+                                background: url("../img/art.svg");
+                                @include icon-bg();
+                            }
+                            
+                            .icon-collections {
+                                background: url("../img/collections.svg");
+                                @include icon-bg();
+                            }
+                            
+                            .icon-plan {
+                                background: url("../img/plan.svg");
+                                @include icon-bg();
+                            }
+                            
+                            .icon-member {
+                                background: url("../img/member.svg");
+                                @include icon-bg();
+                            }
+                            
+                            .icon-shop {
+                                background: url("../img/shop.svg");
+                                @include icon-bg();
+                            }
+                            
+                            h2 {
+                                font-size: 24px;
+                                font-weight: 800;
+                                line-height: 30px;
+                                padding-top: 10px;
+                                padding-bottom: 5px;
+                            }
+                            
+                            h3 {
+                                font-size: 12px;
+                                color: $red;
+                                font-weight: 800;
+                                line-height: 20px;
+                                padding-top: 10px;
+                                text-transform: uppercase;
+                            }
+                            
+                            p {
+                                font-size: 12px;
+                            }
+                            
+                            .text-red {
+                                color: $red;
+                            }
+                            
+                            .text-gray {
+                                color: $grey;
+                            }
+                            
+                            .text-black {
+                                color: $black;
+                            }
+                            
+                            .navbar-title {
+                                color: $red;
+                                font-weight: bold;
+                                display: none;
+                            }
+                            
+                            .active {
+                                border-bottom: solid 3px $red;
+                                font-size: 18px;
+                                font-weight: bold;
+                                color: $dark;
+                            }
+                            
+                            .disable {
+                                color: $grey;
+                            }
+                            
+                            .gallery {
+                                @include center-container();
+                                padding-top: 40px;
+                                .gallery-search-icon {
+                                    position: absolute;
+                                    left: 19em;
+                                    filter: brightness(0) saturate(100%) invert(47%) sepia(99%) saturate(3785%) hue-rotate(338deg) brightness(100%) contrast(103%);
+                                }
+                                .form-control {
+                                    border: solid 1px $red;
+                                    width: 340px;
+                                }
+                                 ::placeholder {
+                                    color: $red;
+                                    font-weight: bold;
+                                }
+                                .search-label {
+                                    color: $red;
+                                    padding-top: 10px;
+                                }
+                                .gallery-search {
+                                    position: relative;
+                                }
+                            }
+                            
+                            .tickets {
+                                width: 375px;
+                                margin: 0 auto;
+                                padding-top: 40px;
+                                .btn-red {
+                                    border-radius: 0;
+                                    background-color: $red;
+                                    color: $white;
+                                    font-weight: 500;
+                                    font-size: 12px;
+                                    padding-left: 30px;
+                                    padding-right: 30px;
+                                    @include center-container();
+                                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                }
+                                .square {
+                                    width: 20px;
+                                    height: 20px;
+                                    border: solid 1px $grey;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: $grey;
+                                }
+                                .tabs {
+                                    @include center-container();
+                                    border-bottom: solid 1px $grey;
+                                }
+                                .date {
+                                    text-align: center;
+                                    margin-top: 25px;
+                                    font-size: 12px;
+                                    font-weight: bold;
+                                }
+                                .tickets-footer {
+                                    border-top: solid 1px $red
+                                }
+                                .large-text {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                }
+                                .text {
+                                    font-size: 12px;
+                                }
+                            }
+                            
+                            .form-control {
+                                border-radius: 0px;
+                            }
+                            
+                            @media screen and (max-width: 1175px) {
+                                .navbar-light .navbar-nav .nav-link {
+                                    font-size: 10x;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 940px) {
+                                .search-box {
+                                    margin-left: 0px;
+                                    input {
+                                        margin-top: 15px;
+                                        width: 50%;
+                                        border-radius: 0px;
+                                        border: solid 1px #fff;
+                                        background-color: transparent;
+                                    }
+                                     ::placeholder {
+                                        color: $white;
+                                    }
+                                }
+                                .navbar {
+                                    padding: 0;
+                                }
+                                .navbar-collapse {
+                                    background-color: $red;
+                                    padding-left: 20px;
+                                }
+                                .navbar-light .navbar-nav .nav-link {
+                                    color: $white;
+                                }
+                                .icon-color {
+                                    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(245deg) brightness(106%) contrast(102%);
+                                }
+                                .logo,
+                                .navbar-toggler {
+                                    margin: 10px;
+                                }
+                                .navbar-title {
+                                    display: block;
+                                }
+                            }
